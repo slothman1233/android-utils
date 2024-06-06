@@ -1,3 +1,3 @@
-rootProject.name = "LibCatch"
+rootProject.name = "LibDB"
 include ':app'
-include ':lib_catch'
+include ':lib_db'
