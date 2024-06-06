@@ -1,2 +1,2 @@
-# android-lib-db
+# android-lib-image-load
 

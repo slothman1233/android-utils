@@ -1,3 +1,3 @@
-rootProject.name = "LibDB"
+rootProject.name = "LibImageLoad"
 include ':app'
-include ':lib_db'
+include ':lib_imgload'
