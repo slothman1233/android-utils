@@ -1,0 +1,74 @@
+// 1.maven-插件
+//maven插件在gradel7.0 已删除
+apply plugin: 'maven-publish'
+
+//如何打包发布
+//1. 打包到本地仓库
+// 1.1 在对应lib工程右侧菜单Gradle 选择Tasks任务
+// 1.2 打开publishing文件夹
+// publishAllPublicationsToLocalRepository 将所有出版物发布到 LibTools 存储库
+// publishDebugTypePublicationToSnapshotRepository 打包DebugType到远程SnapshotRepository仓库
+// publishProductReleasePublicationToReleaseRepository 打包发布包到远程ReleaseRepository仓库
+
+def account="android-user"
+def pwd="abc@123..."
+def snapshotVersion="0.0.4-SNAPSHOT"
+def releaseVersion="0.0.1-RELEASE"
+def pluginGroupId="com.cjjc.lib_catch"
+def pluginArtifactId="lib_catch"
+
+// 用于打包源代码的任务
+task androidSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier = "sources"
+}
+
+afterEvaluate {
+    publishing {
+        repositories {
+            // 本地仓库
+            maven {
+                name('Local')
+                url = uri("./../repo")
+            }
+            // 远程仓库 快照版
+            maven {
+                allowInsecureProtocol(true)
+                name('Snapshot')
+                url = uri("http://nexus.ops.hncjjc.cn/repository/android-plugin-snapshot/")//私有maven库地址
+                credentials {
+                    username = account
+                    password = pwd
+                }
+            }
+            // 远程仓库 发布版
+            maven {
+                allowInsecureProtocol(true)
+                name('Release')
+                url = uri("http://nexus.ops.hncjjc.cn/repository/android-plugin-release/")//私有maven库地址
+                credentials {
+                    username = account
+                    password = pwd
+                }
+            }
+        }
+        publications {
+            debugType(MavenPublication) {
+                from components.debug
+                groupId pluginGroupId
+                artifact androidSourcesJar // 增加上传源码的 task
+                artifactId pluginArtifactId
+                version snapshotVersion
+            }
+            productRelease(MavenPublication) {
+                from components.release
+                groupId pluginGroupId
+                artifact androidSourcesJar // 增加上传源码的 task
+                artifactId pluginArtifactId
+                version releaseVersion
+            }
+        }
+    }
+}
+
+
