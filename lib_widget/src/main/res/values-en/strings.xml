@@ -1,0 +1,12 @@
+<resources>
+    <string name="refresh_footer_pulling" translatable="false">Pull up to load more</string>
+    <string name="refresh_footer_release" translatable="false">Release load immediately</string>
+    <string name="refresh_footer_refreshing" translatable="false">Refreshing...</string>
+    <string name="refresh_footer_loading" translatable="false">Loading...</string>
+    <string name="refresh_footer_finish" translatable="false">Load complete</string>
+    <string name="refresh_footer_failed" translatable="false">Failed to load</string>
+    <string name="refresh_footer_nothing" translatable="false">No more data</string>
+    <string name="refresh_header_pulldown" translatable="false">Pull down to refresh</string>
+    <string name="refresh_header_update" translatable="false">Last update M-d HH:mm</string>
+
+</resources>
