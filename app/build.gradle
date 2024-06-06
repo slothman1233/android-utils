@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.cjjc.libimageload"
+        applicationId "com.cjjc.libnetwork"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
@@ -39,17 +39,16 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    
-    implementation 'com.cjjc.lib_tools:lib_tools:0.0.2-SNAPSHOT'
-
 
     //本地仓库/远程仓库使用方式
-    implementation 'com.cjjc.lib_imageload:lib_imageload:0.0.1-SNAPSHOT'
+//    implementation 'com.cjjc.lib_network:lib_network:0.0.4-SNAPSHOT'
     //aar直接依赖方式
-//    implementation(name: 'lib_imageload-1.0.0', ext: 'aar')
+//    implementation(name: 'lib_network-1.0.0', ext: 'aar')
 
-//    implementation project(path: ':lib_imgload')
+    implementation 'com.cjjc.lib_tools:lib_tools:0.0.7-SNAPSHOT'
 
+    implementation project(path: ':lib_network')
     implementation "com.google.dagger:hilt-android:2.42"//注入框架
     annotationProcessor "com.google.dagger:hilt-compiler:2.42"
+
 }

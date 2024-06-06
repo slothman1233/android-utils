@@ -1,0 +1,144 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.cjjc.lib_network",
+    "module": "lib_network",
+    "version": "0.0.10-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugVariantDebugApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "lib_network-0.0.10-SNAPSHOT.aar",
+          "url": "lib_network-0.0.10-SNAPSHOT.aar",
+          "size": 174087,
+          "sha512": "c2666c3600c9d54fc76a0fd91869b169147b3fd434b6a70ed832b9a590feb5046de952d18a8ea3ecf59d1113af342ba5591128a6fad7ea1ea4d2006f92b896bc",
+          "sha256": "fec21e1bf7816c3b7898b3df0d30abf28d6e9726a347d4bffc0d272bdd5cae74",
+          "sha1": "81a6112937aaf7d72c124ba6a0279a5a5bedb6e4",
+          "md5": "15eee7a4f32075b6381c636739ebbeb4"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "com.cjjc.lib_tools",
+          "module": "lib_tools",
+          "version": {
+            "requires": "0.0.7-SNAPSHOT"
+          }
+        },
+        {
+          "group": "com.github.liujingxing.rxhttp",
+          "module": "rxhttp",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.10.0"
+          }
+        },
+        {
+          "group": "com.trello",
+          "module": "rxlifecycle-components",
+          "version": {
+            "requires": "0.6.1"
+          }
+        },
+        {
+          "group": "io.reactivex.rxjava3",
+          "module": "rxandroid",
+          "version": {
+            "requires": "3.0.0"
+          }
+        },
+        {
+          "group": "io.reactivex.rxjava3",
+          "module": "rxjava",
+          "version": {
+            "requires": "3.1.5"
+          }
+        },
+        {
+          "group": "com.github.liujingxing.rxlife",
+          "module": "rxlife-rxjava3",
+          "version": {
+            "requires": "2.2.2"
+          }
+        },
+        {
+          "group": "com.github.liujingxing.rxhttp",
+          "module": "converter-fastjson",
+          "version": {
+            "requires": "2.9.0"
+          }
+        },
+        {
+          "group": "com.google.dagger",
+          "module": "hilt-android",
+          "version": {
+            "requires": "2.42"
+          }
+        },
+        {
+          "group": "org.greenrobot",
+          "module": "eventbus",
+          "version": {
+            "requires": "3.3.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lib_network-0.0.10-SNAPSHOT.aar",
+          "url": "lib_network-0.0.10-SNAPSHOT.aar",
+          "size": 174087,
+          "sha512": "c2666c3600c9d54fc76a0fd91869b169147b3fd434b6a70ed832b9a590feb5046de952d18a8ea3ecf59d1113af342ba5591128a6fad7ea1ea4d2006f92b896bc",
+          "sha256": "fec21e1bf7816c3b7898b3df0d30abf28d6e9726a347d4bffc0d272bdd5cae74",
+          "sha1": "81a6112937aaf7d72c124ba6a0279a5a5bedb6e4",
+          "md5": "15eee7a4f32075b6381c636739ebbeb4"
+        }
+      ]
+    }
+  ]
+}
